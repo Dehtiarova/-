@@ -21,10 +21,7 @@ use yii\helpers\Url;
                         <div class="entry-content">
                             <?= $article->content?>
                         </div>
-                        <div class="decoration">
-                            <a href="#" class="btn btn-default">Decoration</a>
-                            <a href="#" class="btn btn-default">Decoration</a>
-                        </div>
+
 
                         <div class="social-share">
 							<span

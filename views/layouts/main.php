@@ -38,26 +38,24 @@ PublicAsset::register($this);
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="/"><img src="/public/images/logo.jpg" alt=""></a>
+                    <a class="navbar-brand" href="/"><img src="/public/images/logo.png" alt=""></a>
                 </div>
 
 
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 
                     <ul class="nav navbar-nav text-uppercase">
-                        <li><a data-toggle="dropdown" class="dropdown-toggle" href="/">Home</a>
 
-                        </li>
                     </ul>
                     <div class="i_con">
                         <ul class="nav navbar-nav text-uppercase">
                             <?php if(Yii::$app->user->isGuest):?>
-                                <li><a href="<?= Url::toRoute(['auth/login'])?>">Login</a></li>
-                                <li><a href="<?= Url::toRoute(['auth/signup'])?>">Register</a></li>
+                                <li><a href="<?= Url::toRoute(['auth/login'])?>">Вхід</a></li>
+                                <li><a href="<?= Url::toRoute(['auth/signup'])?>">Реєстрація</a></li>
                             <?php else: ?>
                                 <?= Html::beginForm(['/auth/logout'], 'post')
                                 . Html::submitButton(
-                                    'Logout (' . Yii::$app->user->identity->name . ')',
+                                    'Вихід (' . Yii::$app->user->identity->name . ')',
                                     ['class' => 'btn btn-link logout', 'style'=>"padding-top:10px;"]
                                 )
                                 . Html::endForm() ?>
@@ -82,25 +80,23 @@ PublicAsset::register($this);
                 <div class="col-md-4">
                     <aside class="footer-widget">
                         <div class="about-img"><img src="/public/images/logo2.png" alt=""></div>
-                        <div class="about-content">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
-                            eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed voluptua. At vero eos et
-                            accusam et justo duo dlores et ea rebum magna text ar koto din.
+                        <div class="about-content">Документи не потрібно передавати до рук правоохоронців, достатньо їх показати, тримаючи у своїх руках.
                         </div>
                         <div class="address">
-                            <h4 class="text-uppercase">contact Info</h4>
+                            <h4 class="text-uppercase">Контактна інформація</h4>
 
-                            <p> 14529/12 NK Streets, DC, KZ</p>
+                            <p> 14529/12 GBR, PL, UA</p>
 
-                            <p> Phone: +123 456 78900</p>
+                            <p> Телефон: +696969696969</p>
 
-                            <p>mytreasure.com</p>
+                            <p>site.com</p>
                         </div>
                     </aside>
                 </div>
 
                 <div class="col-md-4">
                     <aside class="footer-widget">
-                        <h3 class="widget-title text-uppercase">Testimonials</h3>
+                        <h3 class="widget-title text-uppercase">Ми вам допоможемо</h3>
 
                         <div id="myCarousel" class="carousel slide" data-ride="carousel">
                             <!--Indicator-->
@@ -113,10 +109,25 @@ PublicAsset::register($this);
                                 <div class="item active">
                                     <div class="single-review">
                                         <div class="review-text">
-                                            <p>Lorem ipsum dolor sit amet, conssadipscing elitr, sed diam nonumy eirmod
-                                                tempvidunt ut labore et dolore magna aliquyam erat,sed diam voluptua. At
-                                                vero eos et accusam justo duo dolores et ea rebum.gubergren no sea takimata
-                                                magna aliquyam eratma</p>
+                                            <p>Зустрічі, відрядження, ремонт службового авто... Знайомі ситуації для будь-якого бізнесу. Оренда авто під потреби компанії на кілька днів або тижнів - це просте і швидке вирішення подібних питань. Підготовка та видача авто за 1 день!</p>
+                                        </div>
+                                        <div class="author-id">
+                                            <img src="/public/images/author.png" alt="">
+
+                                            <div class="author-text">
+                                                <h4>Байрактар</h4>
+
+                                                <h4>CEO, ReadyTheme</h4>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="single-review">
+                                        <div class="review-text">
+                                            <p>Насолоджуйтесь поїздкою сповна, про все інше подбаємо ми.
+
+                                                Додайте опцію Повна страховка у свою заявку і не думайте про ризики, пов'язані з пошкодженням кузова. Усі витрати покриватимуться страховкою.</p>
                                         </div>
                                         <div class="author-id">
                                             <img src="/public/images/author.png" alt="">
@@ -132,29 +143,7 @@ PublicAsset::register($this);
                                 <div class="item">
                                     <div class="single-review">
                                         <div class="review-text">
-                                            <p>Lorem ipsum dolor sit amet, conssadipscing elitr, sed diam nonumy eirmod
-                                                tempvidunt ut labore et dolore magna aliquyam erat,sed diam voluptua. At
-                                                vero eos et accusam justo duo dolores et ea rebum.gubergren no sea takimata
-                                                magna aliquyam eratma</p>
-                                        </div>
-                                        <div class="author-id">
-                                            <img src="/public/images/author.png" alt="">
-
-                                            <div class="author-text">
-                                                <h4>Sophia</h4>
-
-                                                <h4>CEO, ReadyTheme</h4>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="item">
-                                    <div class="single-review">
-                                        <div class="review-text">
-                                            <p>Lorem ipsum dolor sit amet, conssadipscing elitr, sed diam nonumy eirmod
-                                                tempvidunt ut labore et dolore magna aliquyam erat,sed diam voluptua. At
-                                                vero eos et accusam justo duo dolores et ea rebum.gubergren no sea takimata
-                                                magna aliquyam eratma</p>
+                                            <p>Якщо ви не додаєте Повну страховку до своєї заявки та повертаєте автомобіль з пошкодженнями, то вартість ремонту вираховуватиметься з вашої застави.</p>
                                         </div>
                                         <div class="author-id">
                                             <img src="/public/images/author.png" alt="">
@@ -174,7 +163,7 @@ PublicAsset::register($this);
                 </div>
                 <div class="col-md-4">
                     <aside class="footer-widget">
-                        <h3 class="widget-title text-uppercase">Custom Category Post</h3>
+                        <h3 class="widget-title text-uppercase">Пости про авто та все що з ним пов'язано</h3>
 
 
                         <div class="custom-post">
@@ -182,8 +171,7 @@ PublicAsset::register($this);
                                 <a href="#"><img src="/public/images/footer-img.png" alt=""></a>
                             </div>
                             <div>
-                                <a href="#" class="text-uppercase">Home is peaceful Place</a>
-                                <span class="p-date">February 15, 2016</span>
+                                <span class="p-date">January 12, 2023</span>
                             </div>
                         </div>
                     </aside>
@@ -194,8 +182,8 @@ PublicAsset::register($this);
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
-                        <div class="text-center">&copy; 2015 <a href="#">Treasure PRO, </a> Built with <i
-                                    class="fa fa-heart"></i> by <a href="#">Rahim</a>
+                        <div class="text-center">&copy; 2023 <a href="#">blog-transport, </a> Developers <i
+                                    class="fa fa-heart"></i> <a href="#">Зубченко Єгор, Сахно Анастасія, Квітка Євген</a>
                         </div>
                     </div>
                 </div>

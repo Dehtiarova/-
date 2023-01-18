@@ -11,7 +11,7 @@
                 <h5><?= $comment->user->name;?></h5>
 
                 <p class="comment-date">
-                    <?= $comment->getDate();?>
+                    <?= $comment->date;?>
                 </p>
 
 
@@ -25,7 +25,7 @@
 
 <?php if(!Yii::$app->user->isGuest):?>
     <div class="leave-comment"><!--leave comment-->
-        <h4>Leave a reply</h4>
+        <h4>Комментарі</h4>
         <?php if(Yii::$app->session->getFlash('comment')):?>
             <div class="alert alert-success" role="alert">
                 <?= Yii::$app->session->getFlash('comment'); ?>
@@ -36,10 +36,10 @@
             'options'=>['class'=>'form-horizontal contact-form', 'role'=>'form']])?>
         <div class="form-group">
             <div class="col-md-12">
-                <?= $form->field($commentForm, 'comment')->textarea(['class'=>'form-control','placeholder'=>'Write Message'])->label(false)?>
+                <?= $form->field($commentForm, 'comment')->textarea(['class'=>'form-control','placeholder'=>'Напиши комент'])->label(false)?>
             </div>
         </div>
-        <button type="submit" class="btn send-btn">Post Comment</button>
+        <button type="submit" class="btn send-btn">Відправити</button>
         <?php \yii\widgets\ActiveForm::end();?>
     </div><!--end leave comment-->
 <?php endif;?>

@@ -13,7 +13,7 @@ use yii\widgets\LinkPager;
                             <a href="<?= Url::toRoute(['site/view', 'id'=>$article->id]);?>"><img src="<?= $article->getImage();?>" alt=""></a>
 
                             <a href="<?= Url::toRoute(['site/view', 'id'=>$article->id]);?>" class="post-thumb-overlay text-center">
-                                <div class="text-uppercase text-center">View Post</div>
+                                <div class="text-uppercase text-center">Переглянути</div>
                             </a>
                         </div>
                         <div class="post-content">
@@ -29,11 +29,11 @@ use yii\widgets\LinkPager;
                                 </p>
 
                                 <div class="btn-continue-reading text-center text-uppercase">
-                                    <a href="<?= Url::toRoute(['site/view', 'id'=>$article->id]);?>" class="more-link">Continue Reading</a>
+                                    <a href="<?= Url::toRoute(['site/view', 'id'=>$article->id]);?>" class="more-link">Продовжити читати...</a>
                                 </div>
                             </div>
                             <div class="social-share">
-                                <span class="social-share-title pull-left text-capitalize">By <?= $article->author->name; ?> On <?= $article->getDate();?></span>
+                                <span class="social-share-title pull-left text-capitalize">Автор <?= $article->author->name; ?> Дата: <?= $article->getDate();?></span>
                                 <ul class="text-center pull-right">
                                     <li><a class="s-facebook" href="#"><i class="fa fa-eye"></i></a></li><?= (int) $article->viewed?>
                                 </ul>

@@ -16,7 +16,7 @@ $this->params['breadcrumbs'][] = $this->title;
             <div class="site-login">
                 <h1><?= Html::encode($this->title) ?></h1>
 
-                <p>Please fill out the following fields to login:</p>
+                <p>Будь-ласка заповніть наступні поля для логіну у систему:</p>
 
                 <?php $form = ActiveForm::begin([
                     'id' => 'login-form',
@@ -37,7 +37,7 @@ $this->params['breadcrumbs'][] = $this->title;
 
                 <div class="form-group">
                     <div class="col-lg-offset-1 col-lg-11">
-                        <?= Html::submitButton('Login', ['class' => 'btn btn-primary', 'name' => 'login-button']) ?>
+                        <?= Html::submitButton('Вхід', ['class' => 'btn btn-primary', 'name' => 'login-button']) ?>
                     </div>
                 </div>
 
@@ -53,11 +53,7 @@ $this->params['breadcrumbs'][] = $this->title;
                 VK.init({apiId: 5862316});
             </script>
 
-            <!-- Put this div tag to the place, where Auth block will be -->
-            <div id="vk_auth"></div>
-            <script type="text/javascript">
-                VK.Widgets.Auth("vk_auth", {width: "200px", authUrl: '/auth/login-vk'});
-            </script>
+
         </div>
     </div>
 </div>
